@@ -100,4 +100,13 @@ fun main(args: Array<String>) {
 
     println(kevin)
 
+    //Decomposed the object in touples
+    val (name, id) = kevin
+
+    println("User is $name and id is $id")
+
+    //Copy object
+    val otherUser = kevin.copy(id = 2)
+
+    println(otherUser)
 }
