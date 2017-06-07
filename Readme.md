@@ -27,6 +27,14 @@ Examples an exercises of Android development using Kotlin Programming language
 
   You can configure updates and other stuff from "Tools" > "Kotlin"
 
+## Kotlin Koans
+
+  - Clone Koans from [github](https://github.com/Kotlin/kotlin-koans )
+  - Read instructions from [official Kotlin](https://kotlinlang.org/docs/tutorials/koans.html)
+  - To use in Android Studio:
+    - Import as gradle project
+    - each time you want to run a test, firs run in console `./gradlew test`
+
 ## Command line compiler
 
   - On MAC OS X Use [Homebrew](https://brew.sh/):
