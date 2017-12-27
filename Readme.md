@@ -55,6 +55,28 @@ Examples an exercises of Android development using Kotlin Programming language
   - To run Scripts:
     - `kotlinc -script script_sample.kts /` runs the sample script and list all folders on root folder
 
+### Some important language notes
+- `when` statement does'nt need a break
+- `List<type>, Set<type>, Map<type>` is used for immutable (read only) lists, sets, maps
+- `MutableList<type>, Set<type>, Map<type>` is used for mutable lists, sets, maps
+- `for` loop use ranges and can print with index reference
+``
+for (i in 1..12){
+    println("$i is my index, cool eh\n")
+}
+``
+and reverse
+``
+for (i in 12 downTo 1 <step 1 is default, so step is optional> step 2){
+    println("$i is my index, cool eh\n")
+}
+``
+
+### Useful about arrays and collections
+- `array = arrayOf(element1, element2)` create array (immutable)
+- `array.joinToString()` print array
+- `array = mutableListOf(element1, element2)` create array (mutable) `mutableSetOf`, `mutableMapOf`
+- `mutableMap = mutableMapOf(1 to "Cam", 2 to "Al")`
 
 License
 ----

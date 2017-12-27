@@ -42,8 +42,8 @@ import com.rsk.Providers
 //Version 2 functional style
 fun main(args: Array<String>){
 
-    val providers = Providers()
-    val details = providers.getAllProviders("Random")
+//    val providers = Providers()
+//    val details = providers.getAllProviders("Random")
 
     //Kotlin provides name to var details so we only have to reference entry as
     // "it" and define the behaviour
@@ -52,7 +52,7 @@ fun main(args: Array<String>){
 //    details.forEach { println(it) }
 //    Or we can call for each passing print function
     // we are passing a function, this function passes a single parameter
-    details.forEach(::println)
+//    details.forEach(::println)
 
 //    getAllProviders{
 //        key, value -> println("\t$key: $value")
