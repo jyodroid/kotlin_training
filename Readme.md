@@ -18,6 +18,7 @@ Examples an exercises of Android development using Kotlin Programming language
     - Kotlin is shipped with IntelliJ IDEA since 15
   - Supports immutability. You can declare fixed values
   - Supports functional constructs
+  - Does not include Checked Exception (inheritance from Exception but not a subclass of RuntimeException)
 
 ## Android Studio Installation
 
@@ -49,8 +50,8 @@ Examples an exercises of Android development using Kotlin Programming language
     - `kotlinc`
 
   - To compile and run a .kt file:
-    - `kotlinc HelloWorld.kt -include-runtime -d HelloWorld.jar` to compile. `-d` indicates the output `-include-runtime` indicates we want a .jar
-    - `java -jar HelloWorld.jar` to run program
+    - `kotlinc Hello.kt -include-runtime -d Hello.jar` to compile. `-d` indicates the output `-include-runtime` indicates we want a .jar
+    - `java -jar Hello.jar` to run program
 
   - To run Scripts:
     - `kotlinc -script script_sample.kts /` runs the sample script and list all folders on root folder

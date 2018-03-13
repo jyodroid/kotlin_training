@@ -8,3 +8,5 @@
 .idea
 app/src/main/kotlin/samples/*.jar
 app/libs/
+*.class
+META-INF
