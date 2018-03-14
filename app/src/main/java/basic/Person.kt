@@ -1,5 +1,3 @@
-package com.rsk
-
 /**
  * Created by John Tangarife on 12/12/16.
  */
@@ -32,13 +30,13 @@ open class Person(val name: String, var age: Int = 0) : Signatory {
 
     var isMarried = false
 
-//    secondary constructor
-    constructor(name: String, age: Int, isMarried: Boolean) : this(name, age){
+    //    secondary constructor
+    constructor(name: String, age: Int, isMarried: Boolean) : this(name, age) {
         this.isMarried = isMarried
     }
 
     //There are no static in kotlin but is defined the concept of "companion object"
-    companion object{
+    companion object {
         //kotlin annotation to run a companion
         @JvmStatic
         fun main(args: Array<String>) {
@@ -54,11 +52,12 @@ open class Person(val name: String, var age: Int = 0) : Signatory {
     }
 
     //Class methods
-    fun display(){
+    fun display() {
         println("Display: $name")
     }
 
-    fun displayWithLambda(func: (s:String) -> Unit){
+    // To return Void on Kotlin terms we use "Unit"
+    fun displayWithLambda(func: (s: String) -> Unit) {
         func(name)
     }
 
@@ -83,18 +82,19 @@ open class Person(val name: String, var age: Int = 0) : Signatory {
 //
 //}
 
-class Student(name: String, age: Int) : Person(name, age){
-
-}
+class Student(name: String, age: Int) : Person(name, age)
 
 // kotlin has classes that only holds data (as models?) and provides methods as equals, hashCode,
 // toString ...
-data class User (val name: String, val id:Int)
+data class User(val name: String, val id: Int)
 
 fun main(args: Array<String>) {
     val p = Person("John", 30)
 
     p.display()
+
+    // Pass a function reference
+    p.displayWithLambda(::printName)
 
     p.sign()
 
@@ -104,7 +104,7 @@ fun main(args: Array<String>) {
     p.age = 61
     p.sign()
 
-    if (p.name == "John"){
+    if (p.name == "John") {
         println("Same name")
     }
 
@@ -121,4 +121,8 @@ fun main(args: Array<String>) {
     val otherUser = kevin.copy(id = 2)
 
     println(otherUser)
+}
+
+fun printName(name: String) {
+    println(name)
 }
