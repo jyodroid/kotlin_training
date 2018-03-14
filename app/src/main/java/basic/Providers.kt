@@ -1,5 +1,3 @@
-package com.rsk
-
 import java.security.Provider
 import java.security.Security
 
@@ -16,8 +14,7 @@ class Providers {
         val providers = Security.getProviders()
 
 //        Colections conversion
-        val listOfProviders:List<Provider> = providers.asList()
-        return listOfProviders
+        return providers.asList()
     }
 
     fun getAllProviders() : List<ProviderDetails>{
@@ -29,7 +26,7 @@ class Providers {
 
         providers.forEach {
             provider ->
-            var providerDetails =
+            val providerDetails =
                     provider.entries.map {
                         //Kotlin provides name to var entry so we only have to reference entry as
                         // "it" and define the behaviour
@@ -46,8 +43,7 @@ class Providers {
     companion object{
         fun getProviders() : List<Provider>{
             val providers = Security.getProviders()
-            val listOfProviders:List<Provider> = providers.asList()
-            return listOfProviders
+            return providers.asList()
         }
     }
 

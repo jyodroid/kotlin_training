@@ -53,6 +53,15 @@ open class Person(val name: String, var age: Int = 0) : Signatory {
         }
     }
 
+    //Class methods
+    fun display(){
+        println("Display: $name")
+    }
+
+    fun displayWithLambda(func: (s:String) -> Unit){
+        func(name)
+    }
+
     //Method expression
     override fun sign() =
             println("$name aged $age I am doing a method expression and " +
@@ -84,6 +93,9 @@ data class User (val name: String, val id:Int)
 
 fun main(args: Array<String>) {
     val p = Person("John", 30)
+
+    p.display()
+
     p.sign()
 
 //    val for constant val is not mutable
